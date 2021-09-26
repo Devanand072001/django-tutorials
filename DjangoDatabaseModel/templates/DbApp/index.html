@@ -17,15 +17,29 @@
 
     </header>
     <main>
-        sdfsd
-       
-        {% if emp_data %}
-        {% for employee in emp_list %}
-        <p>{{ emp}}</p>
-        <p></p>
-        <p></p>
-        {% endfor %}
-        {% endif %}
+        <div class="container m-5 d-flex align-items-center justify-content-center">
+            <img src="https://picsum.photos/500/500" class="img-fluid shadow-lg rounded-3" alt="">
+        </div>
+        <div class="containter">
+        </div>
+
+        <div class="container">
+            {% if emp_list %}
+            {% for employee in emp_list %}
+            <table class="table table-striped">
+                <tr>
+                    
+                    <td>{{employee.emp_no}}</td>
+                    <td>{{employee.emp_name}}</td>
+                    <td>{{employee.emp_salary}}</td>
+                    <td>{{employee.emp_email}}</td>
+                </tr>
+            </table>
+           
+            {% endfor %}
+            {% endif %}
+
+        </div>
     </main>
     <footer>
 
